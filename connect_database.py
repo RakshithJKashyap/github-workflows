@@ -11,7 +11,8 @@ cassandra_password = os.getenv("CASSANDRA_PASSWORD")
 
 
 cloud_config= {
-  'secure_connect_bundle': 'secure-connect-task2.zip'
+  'secure_connect_bundle': 'secure-connect-task2.zip',
+  'keyspace' : 'learn'
 }
 auth_provider = PlainTextAuthProvider(cassandra_username, cassandra_password)
 cluster = Cluster(cloud=cloud_config, auth_provider=auth_provider)
